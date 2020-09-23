@@ -1,0 +1,510 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
+    
+    
+      
+        <title>openEHR Practical Modelling Examples</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.fe0cca5b.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#openehr-modelling-practical" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="." title="openEHR Practical Modelling Examples" class="md-header-nav__button md-logo" aria-label="openEHR Practical Modelling Examples">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            openEHR Practical Modelling Examples
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              openEHR modelling practical
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="openEHR Practical Modelling Examples" class="md-nav__button md-logo" aria-label="openEHR Practical Modelling Examples">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    openEHR Practical Modelling Examples
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        openEHR modelling practical
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="." title="openEHR modelling practical" class="md-nav__link md-nav__link--active">
+      openEHR modelling practical
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-tidy-the-basic-template" class="md-nav__link">
+    A. Tidy the basic template
+  </a>
+  
+    <nav class="md-nav" aria-label="A. Tidy the basic template">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problemdiagnosis" class="md-nav__link">
+    Problem/Diagnosis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adverse-reaction-risk" class="md-nav__link">
+    Adverse Reaction Risk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medication-order" class="md-nav__link">
+    Medication Order
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vital-signs-section" class="md-nav__link">
+    Vital Signs section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-clinical-frailty-scale" class="md-nav__link">
+    Add a Clinical Frailty scale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-create-a-new-local-archetype-additional-information-on-admission" class="md-nav__link">
+    B. Create a new local archetype - Additional information on admission
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-tidy-the-basic-template" class="md-nav__link">
+    A. Tidy the basic template
+  </a>
+  
+    <nav class="md-nav" aria-label="A. Tidy the basic template">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problemdiagnosis" class="md-nav__link">
+    Problem/Diagnosis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adverse-reaction-risk" class="md-nav__link">
+    Adverse Reaction Risk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medication-order" class="md-nav__link">
+    Medication Order
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vital-signs-section" class="md-nav__link">
+    Vital Signs section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-clinical-frailty-scale" class="md-nav__link">
+    Add a Clinical Frailty scale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-create-a-new-local-archetype-additional-information-on-admission" class="md-nav__link">
+    B. Create a new local archetype - Additional information on admission
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="openehr-modelling-practical">openEHR modelling practical</h1>
+<p>Getting started</p>
+<ol>
+<li>
+<p>Open a web browser – Chrome or Firefox are best</p>
+</li>
+<li>
+<p>Go to <a href="https://tools.openehr.org/designer/">https://tools.openehr.org/designer</a> - best if you open this link in a new tab.</p>
+</li>
+<li>
+<p>Login: <code>freshehr_training</code>   Password: <code>ad4freshtraining</code></p>
+</li>
+<li>
+<p>Choose the repository allocated to you – Aberdeen, Dundee or Inverness</p>
+</li>
+<li>
+<p>Find ‘Nursing Admission Assessment STARTER.v0' in the list of templates. This will open the template.</p>
+</li>
+<li>
+<p>Open the original <a href="Nursing%20Admission%20Assessment.pdf">'Nursing Admission Assessment paper form'</a> best if you open this link in a new tab. </p>
+</li>
+</ol>
+<h2 id="a-tidy-the-basic-template">A. Tidy the basic template</h2>
+<h3 id="problemdiagnosis">Problem/Diagnosis</h3>
+<ul>
+<li>
+<p>Rename Problem/Diagnosis archetype to Main Diagnosis</p>
+</li>
+<li>
+<p>Constrain out everything apart from Problem/Diagnosis name</p>
+</li>
+</ul>
+<h3 id="adverse-reaction-risk">Adverse Reaction Risk</h3>
+<ul>
+<li>
+<p>Pull in Adverse Reaction Risk archetype</p>
+</li>
+<li>
+<p>Constrain out everything apart from Substance and Manifestation</p>
+</li>
+<li>
+<p>Rename ‘Manifestation’ to ‘Reaction Details’ and make it mandatory</p>
+</li>
+</ul>
+<h3 id="medication-order">Medication Order</h3>
+<ul>
+<li>
+<p>Clone Specific direction description</p>
+</li>
+<li>
+<p>Rename one to Dose and the other to Frequency</p>
+</li>
+</ul>
+<h3 id="vital-signs-section">Vital Signs section</h3>
+<ul>
+<li>
+<p>Pull in Pulse Oximetry into Vital Signs section</p>
+</li>
+<li>
+<p>Constrain out everything apart from SpO2 ratio</p>
+</li>
+<li>
+<p>Make systolic and diastolic BP mandatory</p>
+</li>
+</ul>
+<h3 id="add-a-clinical-frailty-scale">Add a Clinical Frailty scale</h3>
+<p>Goto the International CKM <a href="https://ckm.openehr.org/ckm/archetypes/1013.1.4691/export">https://ckm.openehr.org/ckm/archetypes/1013.1.4691/export</a>
+ (best if you open this link in a new tab).
+- Press the ‘Export ADL’ button and save the archetype somewhere on your system</p>
+<ul>
+<li>
+<p>Go back into Archetype Designer and go to top-menu-&gt;‘Import’ then either Browse to your file or drag and drop then Upload.</p>
+</li>
+<li>
+<p>Go back to your template, click on ‘content’, then pull in the Clinical Frailty scale from the list of archetypes on the right.</p>
+</li>
+</ul>
+<h2 id="b-create-a-new-local-archetype-additional-information-on-admission">B. Create a new local archetype - Additional information on admission</h2>
+<p>The nurses have used the templates you created but have asked for some changes.</p>
+<p>You can view the original document here<a href="Additional%20information%20on%20admission.pdf">'Additional Information on Admission'</a> best if you open this link in a new tab.</p>
+<ul>
+<li>Create a new ADMIN_ENTRY archetype called ‘Inpatient admission details’ then add these ‘element’ datapoints..</li>
+</ul>
+<p><strong>Mode of access</strong>  </p>
+<pre><code>        Ambulatory
+
+        Wheelchair
+
+        Stretcher
+
+        Other       _________________________________
+</code></pre>
+<p><strong>Transported with  Oxygen</strong>    </p>
+<pre><code>        Monitor
+
+        IV
+
+        Other       _________________________________
+</code></pre>
+<p><strong>Admission method  Waiting list</strong>      </p>
+<pre><code>        Booked
+
+        Planned
+
+        A&amp;E department
+
+        General Practitioner
+
+        Bed Bureau
+
+            Consultant Clinic
+
+        Other           ____________________________
+</code></pre>
+<p><strong>Additional Help needed</strong>  </p>
+<pre><code>    Yes          No
+</code></pre>
+<p>Once you have created your new archetype, go back to your template. Highlight ‘content’ and add your new archetype then Save it.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: ".",
+          features: [],
+          search: Object.assign({
+            worker: "assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
