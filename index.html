@@ -21,6 +21,12 @@
     
       <link rel="stylesheet" href="assets/stylesheets/main.fe0cca5b.min.css">
       
+        <link rel="stylesheet" href="assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
       
     
     
@@ -40,7 +46,10 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="teal" data-md-color-accent="">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -186,6 +195,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#a-tidy-the-basic-template" class="md-nav__link">
     A. Tidy the basic template
   </a>
@@ -273,6 +289,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#a-tidy-the-basic-template" class="md-nav__link">
     A. Tidy the basic template
   </a>
@@ -344,16 +367,18 @@
                 
                 
                 <h1 id="openehr-modelling-practical">openEHR modelling practical</h1>
-<p>Getting started</p>
+<h2 id="getting-started">Getting started</h2>
 <ol>
 <li>
 <p>Open a web browser – Chrome or Firefox are best</p>
 </li>
 <li>
-<p>Go to <a href="https://tools.openehr.org/designer/">https://tools.openehr.org/designer</a> - best if you open this link in a new tab.</p>
+<p>Go to <a href="https://tools.openehr.org/designer/">https://tools.openehr.org/designer</a> 
+(Best if you open this link in a new tab).</p>
 </li>
 <li>
-<p>Login: <code>freshehr_training</code>   Password: <code>ad4freshtraining</code></p>
+<p>Login:       <code>freshehr_training</code> 
+   Password:    <code>ad4freshtraining</code></p>
 </li>
 <li>
 <p>Choose the repository allocated to you – Aberdeen, Dundee or Inverness</p>
@@ -362,26 +387,29 @@
 <p>Find ‘Nursing Admission Assessment STARTER.v0' in the list of templates. This will open the template.</p>
 </li>
 <li>
-<p>Open the original <a href="Nursing%20Admission%20Assessment.pdf">'Nursing Admission Assessment paper form'</a> best if you open this link in a new tab. </p>
+<p>Open the original <a href="Nursing%20Admission%20Assessment.pdf">'Nursing Admission Assessment paper form'</a> (Best if you open this link in a new tab). </p>
 </li>
 </ol>
 <h2 id="a-tidy-the-basic-template">A. Tidy the basic template</h2>
 <h3 id="problemdiagnosis">Problem/Diagnosis</h3>
 <ul>
 <li>
-<p>Rename Problem/Diagnosis archetype to Main Diagnosis</p>
+<p>Rename the Problem/Diagnosis archetype to 'Main Diagnosis'</p>
 </li>
 <li>
-<p>Constrain out everything apart from Problem/Diagnosis name</p>
+<p>Constrain out everything apart from 'Problem/Diagnosis name'</p>
 </li>
 </ul>
 <h3 id="adverse-reaction-risk">Adverse Reaction Risk</h3>
 <ul>
 <li>
-<p>Pull in Adverse Reaction Risk archetype</p>
+<p>Pull in the 'Adverse Reaction Risk' archetype</p>
 </li>
 <li>
-<p>Constrain out everything apart from Substance and Manifestation</p>
+<p>Set it's occurrences to 0..* to allow multiple allergies to be recorded.</p>
+</li>
+<li>
+<p>Constrain out everything apart from 'Substance' and 'Manifestation'</p>
 </li>
 <li>
 <p>Rename ‘Manifestation’ to ‘Reaction Details’ and make it mandatory</p>
@@ -390,10 +418,10 @@
 <h3 id="medication-order">Medication Order</h3>
 <ul>
 <li>
-<p>Clone Specific direction description</p>
+<p>Clone 'Specific direction description'</p>
 </li>
 <li>
-<p>Rename one to Dose and the other to Frequency</p>
+<p>Rename one to 'Dose' and the other to 'Frequency'</p>
 </li>
 </ul>
 <h3 id="vital-signs-section">Vital Signs section</h3>
@@ -402,17 +430,20 @@
 <p>Pull in Pulse Oximetry into Vital Signs section</p>
 </li>
 <li>
-<p>Constrain out everything apart from SpO2 ratio</p>
+<p>Constrain out everything apart from 'SpO2' ratio</p>
 </li>
 <li>
-<p>Make systolic and diastolic BP mandatory</p>
+<p>Make 'systolic' and 'diastolic' Blood pressure mandatory</p>
 </li>
 </ul>
 <h3 id="add-a-clinical-frailty-scale">Add a Clinical Frailty scale</h3>
-<p>Goto the International CKM <a href="https://ckm.openehr.org/ckm/archetypes/1013.1.4691/export">https://ckm.openehr.org/ckm/archetypes/1013.1.4691/export</a> {:target="_blank"}
- (best if you open this link in a new tab).
-- Press the ‘Export ADL’ button and save the archetype somewhere on your system</p>
+<p>Go to the International CKM </p>
+<p><a href="https://ckm.openehr.org/ckm/archetypes/1013.1.4691/export">https://ckm.openehr.org/ckm/archetypes/1013.1.4691/export</a></p>
+<p>(Best if you open this link in a new tab).</p>
 <ul>
+<li>
+<p>Press the ‘Export ADL’ button and save the archetype somewhere on your system</p>
+</li>
 <li>
 <p>Go back into Archetype Designer and go to top-menu-&gt;‘Import’ then either Browse to your file or drag and drop then Upload.</p>
 </li>
@@ -422,9 +453,10 @@
 </ul>
 <h2 id="b-create-a-new-local-archetype-additional-information-on-admission">B. Create a new local archetype - Additional information on admission</h2>
 <p>The nurses have used the templates you created but have asked for some changes.</p>
-<p>You can view the original document here<a href="Additional%20information%20on%20admission.pdf">'Additional Information on Admission'</a> best if you open this link in a new tab.</p>
+<p>You can view the original document here  </p>
+<p><a href="Additional%20information%20on%20admission.pdf">'Additional Information on Admission'</a> (Best if you open this link in a new tab).</p>
 <ul>
-<li>Create a new ADMIN_ENTRY archetype called ‘Inpatient admission details’ then add these ‘element’ datapoints..</li>
+<li>Create a new ADMIN_ENTRY archetype called ‘Inpatient admission details’ then add these ‘element’ datapoints ...</li>
 </ul>
 <p><strong>Mode of access</strong>  </p>
 <pre><code>        Ambulatory
