@@ -1,0 +1,5 @@
+site_name: openEHR Practical Modelling Examples
+theme:
+    name: material
+    palette:
+        primary: deep purple
